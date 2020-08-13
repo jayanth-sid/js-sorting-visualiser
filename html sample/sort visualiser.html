@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sort Algorithms</title>
+        <link rel="stylesheet" type="text/css" href="sort visualiser.css">
+        <script type="text/javascript" src="sort visualiser.js"></script>
+        </head>
+    <body onload = "draw()" >
+        <div class = "head"><h1>Sort Algorithms</h1></div>
+        <div class = "content" ><marquee scrolldelay="2" >||Bubble Sort Visualiser||</marquee>
+        </br>
+        <p class = "about">Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted. The algorithm, which is a comparison sort, is named for the way smaller or larger elements "bubble" to the top of the list.</p>
+        </div>
+        </br>
+        <table class= "sorttable">
+            <tr>
+                <td>
+        <div style="text-align: center;">
+            <canvas id="bubblesort" height="600" width="700"  ></canvas>
+                </td>
+                <td>
+                    <div class=algorithm>
+                    <p ><h2>Algorithm used (Java Script):</h2></br>
+                        function bubblesort() {</br>  i = blist.length - 1;</br>  while (i>=0) {</br>var j=0;</br>while(j < i) {</br>if (blist[j]>blist[j+1]) {</br>
+                                        var temp = blist[j];</br>
+                                        blist[j] = blist[j+1];</br>
+                                        blist[j+1] = temp;</br>
+                                    }</br>
+                                    j++;</br>
+                                }</br>
+                                i--;</br>
+                            }</br>
+                        }</br>
+                    </p>
+                </div>
+                </td>
+            </tr>
+        </div > 
+        </table>
+        <table class = "buttontable">
+            <tr>
+                <td><button class="button" onclick="bcreatelist()">Generate</button></td>
+                <td><button class="button" onclick="breset()">Reset</button></td>
+                <td><button class="button" onclick="bubblesort()">BubbleSort</button></td>
+            </tr>
+        </table>
+    </br>
+        <div class = "content"><marquee scrolldelay="2" >||Selection sort visualiser||</marquee>
+            </br>
+            <p class = "about">selection sort is an in-place comparison sorting algorithm.The selection sort algorithm sorts an array by repeatedly finding the minimum element (considering ascending order) from unsorted part and putting it at the beginning. The algorithm maintains two subarrays in a given array.In every iteration of selection sort, the minimum element (considering ascending order) from the unsorted subarray is picked and moved to the sorted subarray.</p>
+        </div>
+        <table class= "sorttable">
+            <tr>
+                <td>
+                    <div style="text-align: center;" >
+                        <canvas id="selectionsort" height="600" width="700"  ></canvas>
+                    </div >
+                </td>
+                <td>
+                    <div class=algorithm>
+                    <p ><h2>Algorithm used (Java Script):</h2></br>function selectionsort (){ </br>
+                        var len = slist.length; </br>
+                        var min ; </br>
+                         for (i=0;i < len;i++){ </br>
+                            min = i; </br>
+                            for (j=i+1;j < len;j++){ </br>
+                                if (slist[min] > slist[j]){ </br>
+                                    min = j; </br>
+                                } </br>
+                            } </br>
+                            var temp = slist[i]; </br>
+                            slist[i] = slist[min]; </br>
+                            slist[min] = temp; </br>
+                         } </br>
+                    } </br>
+                    </p>
+                </div>
+                </td>
+        </tr>  
+        </table>
+            <table class = "buttontable">
+                <tr>
+                    <td><button class="button" onclick="screatelist()">Generate</button></td>
+                    <td><button class="button" onclick="sreset()">Reset</button></td>
+                    <td><button class="button" onclick="selectionsort()">SelectionSort</button></td>
+                </tr>
+            </table>    
+        </body>
+    </html>
